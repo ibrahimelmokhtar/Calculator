@@ -49,6 +49,8 @@ namespace Calculator
             this.btnClear = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnDivide = new System.Windows.Forms.Button();
+            this.txtOperation = new System.Windows.Forms.TextBox();
+            this.txtNumber2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtResult
@@ -57,15 +59,14 @@ namespace Calculator
             this.txtResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtResult.Location = new System.Drawing.Point(20, 19);
             this.txtResult.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.txtResult.Multiline = true;
             this.txtResult.Name = "txtResult";
-            this.txtResult.Size = new System.Drawing.Size(309, 87);
+            this.txtResult.Size = new System.Drawing.Size(310, 44);
             this.txtResult.TabIndex = 0;
             this.txtResult.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btn0
             // 
-            this.btn0.Location = new System.Drawing.Point(99, 444);
+            this.btn0.Location = new System.Drawing.Point(100, 487);
             this.btn0.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btn0.Name = "btn0";
             this.btn0.Size = new System.Drawing.Size(70, 70);
@@ -76,7 +77,7 @@ namespace Calculator
             // 
             // btnDot
             // 
-            this.btnDot.Location = new System.Drawing.Point(19, 444);
+            this.btnDot.Location = new System.Drawing.Point(20, 487);
             this.btnDot.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnDot.Name = "btnDot";
             this.btnDot.Size = new System.Drawing.Size(70, 70);
@@ -89,7 +90,7 @@ namespace Calculator
             // 
             this.btnEqual.BackColor = System.Drawing.Color.CadetBlue;
             this.btnEqual.FlatAppearance.BorderColor = System.Drawing.Color.CadetBlue;
-            this.btnEqual.Location = new System.Drawing.Point(179, 444);
+            this.btnEqual.Location = new System.Drawing.Point(180, 487);
             this.btnEqual.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnEqual.Name = "btnEqual";
             this.btnEqual.Size = new System.Drawing.Size(150, 70);
@@ -100,7 +101,7 @@ namespace Calculator
             // 
             // btn1
             // 
-            this.btn1.Location = new System.Drawing.Point(19, 366);
+            this.btn1.Location = new System.Drawing.Point(20, 409);
             this.btn1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btn1.Name = "btn1";
             this.btn1.Size = new System.Drawing.Size(70, 70);
@@ -111,7 +112,7 @@ namespace Calculator
             // 
             // btn2
             // 
-            this.btn2.Location = new System.Drawing.Point(99, 366);
+            this.btn2.Location = new System.Drawing.Point(100, 409);
             this.btn2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btn2.Name = "btn2";
             this.btn2.Size = new System.Drawing.Size(70, 70);
@@ -122,7 +123,7 @@ namespace Calculator
             // 
             // btn3
             // 
-            this.btn3.Location = new System.Drawing.Point(179, 366);
+            this.btn3.Location = new System.Drawing.Point(180, 409);
             this.btn3.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btn3.Name = "btn3";
             this.btn3.Size = new System.Drawing.Size(70, 70);
@@ -133,7 +134,7 @@ namespace Calculator
             // 
             // btnPlus
             // 
-            this.btnPlus.Location = new System.Drawing.Point(259, 366);
+            this.btnPlus.Location = new System.Drawing.Point(260, 409);
             this.btnPlus.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnPlus.Name = "btnPlus";
             this.btnPlus.Size = new System.Drawing.Size(70, 70);
@@ -144,7 +145,7 @@ namespace Calculator
             // 
             // btn4
             // 
-            this.btn4.Location = new System.Drawing.Point(19, 288);
+            this.btn4.Location = new System.Drawing.Point(20, 331);
             this.btn4.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btn4.Name = "btn4";
             this.btn4.Size = new System.Drawing.Size(70, 70);
@@ -155,7 +156,7 @@ namespace Calculator
             // 
             // btn5
             // 
-            this.btn5.Location = new System.Drawing.Point(99, 288);
+            this.btn5.Location = new System.Drawing.Point(100, 331);
             this.btn5.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btn5.Name = "btn5";
             this.btn5.Size = new System.Drawing.Size(70, 70);
@@ -166,7 +167,7 @@ namespace Calculator
             // 
             // btn6
             // 
-            this.btn6.Location = new System.Drawing.Point(179, 288);
+            this.btn6.Location = new System.Drawing.Point(180, 331);
             this.btn6.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btn6.Name = "btn6";
             this.btn6.Size = new System.Drawing.Size(70, 70);
@@ -177,7 +178,7 @@ namespace Calculator
             // 
             // btnMinus
             // 
-            this.btnMinus.Location = new System.Drawing.Point(259, 288);
+            this.btnMinus.Location = new System.Drawing.Point(260, 331);
             this.btnMinus.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnMinus.Name = "btnMinus";
             this.btnMinus.Size = new System.Drawing.Size(70, 70);
@@ -188,7 +189,7 @@ namespace Calculator
             // 
             // btn7
             // 
-            this.btn7.Location = new System.Drawing.Point(20, 210);
+            this.btn7.Location = new System.Drawing.Point(20, 253);
             this.btn7.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btn7.Name = "btn7";
             this.btn7.Size = new System.Drawing.Size(70, 70);
@@ -199,7 +200,7 @@ namespace Calculator
             // 
             // btn8
             // 
-            this.btn8.Location = new System.Drawing.Point(99, 210);
+            this.btn8.Location = new System.Drawing.Point(100, 253);
             this.btn8.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btn8.Name = "btn8";
             this.btn8.Size = new System.Drawing.Size(70, 70);
@@ -210,7 +211,7 @@ namespace Calculator
             // 
             // btn9
             // 
-            this.btn9.Location = new System.Drawing.Point(179, 210);
+            this.btn9.Location = new System.Drawing.Point(180, 253);
             this.btn9.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btn9.Name = "btn9";
             this.btn9.Size = new System.Drawing.Size(70, 70);
@@ -221,7 +222,7 @@ namespace Calculator
             // 
             // btnMultiply
             // 
-            this.btnMultiply.Location = new System.Drawing.Point(259, 210);
+            this.btnMultiply.Location = new System.Drawing.Point(260, 253);
             this.btnMultiply.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnMultiply.Name = "btnMultiply";
             this.btnMultiply.Size = new System.Drawing.Size(70, 70);
@@ -232,7 +233,7 @@ namespace Calculator
             // 
             // btnModulus
             // 
-            this.btnModulus.Location = new System.Drawing.Point(19, 132);
+            this.btnModulus.Location = new System.Drawing.Point(20, 175);
             this.btnModulus.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnModulus.Name = "btnModulus";
             this.btnModulus.Size = new System.Drawing.Size(70, 70);
@@ -245,7 +246,7 @@ namespace Calculator
             // 
             this.btnClear.BackColor = System.Drawing.Color.Moccasin;
             this.btnClear.FlatAppearance.BorderColor = System.Drawing.Color.Moccasin;
-            this.btnClear.Location = new System.Drawing.Point(99, 132);
+            this.btnClear.Location = new System.Drawing.Point(100, 175);
             this.btnClear.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(70, 70);
@@ -258,7 +259,7 @@ namespace Calculator
             // 
             this.btnDelete.BackColor = System.Drawing.Color.LightYellow;
             this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.LightYellow;
-            this.btnDelete.Location = new System.Drawing.Point(179, 132);
+            this.btnDelete.Location = new System.Drawing.Point(180, 175);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(70, 70);
@@ -269,7 +270,7 @@ namespace Calculator
             // 
             // btnDivide
             // 
-            this.btnDivide.Location = new System.Drawing.Point(259, 132);
+            this.btnDivide.Location = new System.Drawing.Point(260, 175);
             this.btnDivide.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnDivide.Name = "btnDivide";
             this.btnDivide.Size = new System.Drawing.Size(70, 70);
@@ -278,11 +279,33 @@ namespace Calculator
             this.btnDivide.UseVisualStyleBackColor = true;
             this.btnDivide.Click += new System.EventHandler(this.btnDivide_Click);
             // 
+            // txtOperation
+            // 
+            this.txtOperation.Enabled = false;
+            this.txtOperation.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOperation.Location = new System.Drawing.Point(20, 71);
+            this.txtOperation.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.txtOperation.Name = "txtOperation";
+            this.txtOperation.Size = new System.Drawing.Size(310, 44);
+            this.txtOperation.TabIndex = 0;
+            this.txtOperation.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtNumber2
+            // 
+            this.txtNumber2.Enabled = false;
+            this.txtNumber2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumber2.Location = new System.Drawing.Point(20, 123);
+            this.txtNumber2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.txtNumber2.Name = "txtNumber2";
+            this.txtNumber2.Size = new System.Drawing.Size(310, 44);
+            this.txtNumber2.TabIndex = 0;
+            this.txtNumber2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(350, 531);
+            this.ClientSize = new System.Drawing.Size(350, 573);
             this.Controls.Add(this.btnDivide);
             this.Controls.Add(this.btnMultiply);
             this.Controls.Add(this.btnMinus);
@@ -302,6 +325,8 @@ namespace Calculator
             this.Controls.Add(this.btn7);
             this.Controls.Add(this.btn4);
             this.Controls.Add(this.btn1);
+            this.Controls.Add(this.txtNumber2);
+            this.Controls.Add(this.txtOperation);
             this.Controls.Add(this.txtResult);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
@@ -337,6 +362,8 @@ namespace Calculator
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnDivide;
+        private System.Windows.Forms.TextBox txtOperation;
+        private System.Windows.Forms.TextBox txtNumber2;
     }
 }
 

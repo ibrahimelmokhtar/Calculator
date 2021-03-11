@@ -12,6 +12,11 @@ namespace Calculator
 {
     public partial class mainForm : Form
     {
+        public double result;
+        public double firstNumber;
+        public double secondNumber;
+        public char operation;
+
         public mainForm()
         {
             InitializeComponent();
@@ -69,7 +74,7 @@ namespace Calculator
 
         private void btnPlus_Click(object sender, EventArgs e)
         {
-            txtResult.Text += '+';
+            txtResult.Text += "+";
         }
 
         private void btnMinus_Click(object sender, EventArgs e)
@@ -94,7 +99,6 @@ namespace Calculator
 
         private void btnEqual_Click(object sender, EventArgs e)
         {
-            float result = 100;
             txtResult.Text = result.ToString();
         }
 
