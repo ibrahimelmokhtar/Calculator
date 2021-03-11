@@ -15,7 +15,6 @@ namespace Calculator
         public double result;
         public double firstNumber;
         public double secondNumber;
-        public char operation;
 
         public mainForm()
         {
@@ -24,6 +23,10 @@ namespace Calculator
 
         private void displayNumber(char charNumber)
         {
+            /*
+             * Display the pressed button into the correct spot.
+             */
+
             if (txtOperation.Text != "")
             {
                 txtNumber2.Text += charNumber;
@@ -36,6 +39,11 @@ namespace Calculator
 
         private void applyOperation()
         {
+            /*
+             * Check if last textbox is not empty
+             * Then apply the entered operation
+             */
+
             if (txtNumber2.Text != "")
             {
                 firstNumber = double.Parse(txtResult.Text);
