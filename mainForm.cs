@@ -110,7 +110,11 @@ namespace Calculator
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            txtResult.Text = "Delete";
+            if (txtResult.Text != "")
+            {
+                int lastIndex = txtResult.Text.Length - 1;
+                txtResult.Text = txtResult.Text.Remove(lastIndex);
+            }
         }
     }
 }
