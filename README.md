@@ -1,6 +1,6 @@
 # Calculator
 
-A GUI application where you can apply simple mathematical operations (+, -, *, and /).  
+A GUI application where you can apply simple mathematical operations (+, -, *, /, and %).  
 
 ## What I learnt
 
